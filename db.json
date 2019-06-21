@@ -1,0 +1,74 @@
+{
+  "form": [
+    {
+      "nama": "asd",
+      "alamat": "das",
+      "telephone": "asd",
+      "penumpang1": {
+        "nama_p": "ads",
+        "id": "das",
+        "type": "dewasa",
+        "no_p": 1
+      },
+      "penumpang2": "",
+      "penumpang3": "",
+      "penumpang4": "",
+      "pergi": {
+        "action": "pergi",
+        "nama_kereta": "asd",
+        "kelas": "executif",
+        "asal": "asd",
+        "tujuan": "asd",
+        "tanggal": "ads"
+      },
+      "pulang": "",
+      "id": 1
+    },
+    {
+      "nama": "deni",
+      "alamat": "pepet",
+      "telephone": "099138889",
+      "penumpang1": {
+        "nama_p": "ade",
+        "id": "9899",
+        "type": "bayi",
+        "no_p": 1
+      },
+      "penumpang2": {
+        "nama_p": "arif",
+        "id": "8787878",
+        "type": "bayi",
+        "no_p": 2
+      },
+      "penumpang3": {
+        "nama_p": "deni",
+        "id": "98139912",
+        "type": "bayi",
+        "no_p": 3
+      },
+      "penumpang4": {
+        "nama_p": "dede",
+        "id": "424y87824",
+        "type": "bayi",
+        "no_p": 4
+      },
+      "pergi": {
+        "action": "pergi",
+        "nama_kereta": "bogowonto",
+        "kelas": "bisnis",
+        "asal": "sfkjk",
+        "tujuan": "kjkkk",
+        "tanggal": "jkjkjkjkjk"
+      },
+      "pulang": {
+        "action": "pulang",
+        "nama_kereta": "hjhjhjh",
+        "kelas": "bisnis",
+        "asal": "jhjhjj",
+        "tujuan": "hjhjhj",
+        "tanggal": "hjhjhjh"
+      },
+      "id": 2
+    }
+  ]
+}
