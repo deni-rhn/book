@@ -1,6 +1,6 @@
 ## Step To Run
 
 ``Install NPM modules
-Type `npm start``` 
+Type npm start``` 
 
 by deni
