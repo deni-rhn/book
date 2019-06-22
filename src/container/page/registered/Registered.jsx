@@ -1,6 +1,8 @@
 import React,{Component,Fragment} from 'react';
 import RegisteredPost from '../../../component/RegisterdComp/RegisteredPost';
 import axios from 'axios';
+import Api from '../../../env/env';
+import '../../../index';
 
 class Registered extends Component {
 
@@ -12,7 +14,7 @@ class Registered extends Component {
     }
 
     getData = () => {
-        axios.get("http://localhost:3004/form").then((res)=>{
+        axios.get(Api).then((res)=>{
             this.setState({post:res.data},
             ()=>{
                 console.log(this.state);
@@ -21,7 +23,7 @@ class Registered extends Component {
     }
 
     deleteData = (id) =>{
-        const url = "http://localhost:3004/form/"+id;
+        const url = Api+id;
         axios.delete(url).then((res)=>{
             window.location.reload();
             alert("berhasil");
@@ -39,7 +41,7 @@ class Registered extends Component {
         return(
             <div className="registered" >
                 <div className="title">
-                    <h1 className="text-center" > Telah Terdaftar </h1>
+                    <h1 className="text-center" > List Booking </h1>
                     <hr/>
                     <br/>
                 </div>

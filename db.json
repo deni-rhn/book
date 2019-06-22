@@ -1,30 +1,6 @@
 {
   "form": [
     {
-      "nama": "asd",
-      "alamat": "das",
-      "telephone": "asd",
-      "penumpang1": {
-        "nama_p": "ads",
-        "id": "das",
-        "type": "dewasa",
-        "no_p": 1
-      },
-      "penumpang2": "",
-      "penumpang3": "",
-      "penumpang4": "",
-      "pergi": {
-        "action": "pergi",
-        "nama_kereta": "asd",
-        "kelas": "executif",
-        "asal": "asd",
-        "tujuan": "asd",
-        "tanggal": "ads"
-      },
-      "pulang": "",
-      "id": 1
-    },
-    {
       "nama": "deni",
       "alamat": "pepet",
       "telephone": "099138889",
@@ -69,6 +45,52 @@
         "tanggal": "hjhjhjh"
       },
       "id": 2
+    },
+    {
+      "nama": "deni rahmanto",
+      "alamat": "praci",
+      "telephone": "09288989",
+      "penumpang1": {
+        "nama_p": "ade novendra",
+        "id": "0899899",
+        "type": "bayi",
+        "no_p": 1
+      },
+      "penumpang2": {
+        "nama_p": "arif rahman",
+        "id": "089899",
+        "type": "bayi",
+        "no_p": 2
+      },
+      "penumpang3": {
+        "nama_p": "deni rahmanto",
+        "id": "989932",
+        "type": "bayi",
+        "no_p": 3
+      },
+      "penumpang4": {
+        "nama_p": "dede ",
+        "id": "0280423",
+        "type": "bayi",
+        "no_p": 4
+      },
+      "pergi": {
+        "action": "pergi",
+        "nama_kereta": "bogowonto",
+        "kelas": "bisnis",
+        "asal": "yogyakarta",
+        "tujuan": "jakarta",
+        "tanggal": "2019-06-28"
+      },
+      "pulang": {
+        "action": "pulang",
+        "nama_kereta": "bogowonto",
+        "kelas": "eko ac",
+        "asal": "Jakarta",
+        "tujuan": "Yogyakarta",
+        "tanggal": "10-10-2019"
+      },
+      "id": 3
     }
   ]
 }

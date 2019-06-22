@@ -39,9 +39,10 @@
 }
 
 .form-control {
-    padding: 1.4em !important;
+    padding: 1.4em;
 }
 
 select {
     height: 2.9em !important;
+    padding: 0em !important;
 }

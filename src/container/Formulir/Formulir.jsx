@@ -4,6 +4,8 @@ import axios from 'axios';
 import DataPemesanaComp from '../../component/FormFormulir/DataPemesanan/DataPemesanaComp';
 import DataPenumpangComp from '../../component/FormFormulir/DataPenumpang/DataPenumpangComp';
 import DataPerjalananComp from '../../component/FormFormulir/DataPerjalanan/DataPerjalananComp';
+import Header from '../../component/header/Header';
+import Api from '../../env/env';
 
 
 class Formulir extends Component{
@@ -54,7 +56,7 @@ class Formulir extends Component{
 
     // save to db json
     postData = () => {
-      axios.post("http://localhost:3004/form",this.state)
+      axios.post(Api,this.state)
       .then((res)=>{
         this.props.history.push('/registered');
       },(err) =>{
@@ -64,7 +66,7 @@ class Formulir extends Component{
 
     // save to db json
     editData = () => {
-          const url = "http://localhost:3004/form/"+this.props.match.params.id;
+          const url = Api+this.props.match.params.id;
           axios.put(url,this.state)
           .then((res)=>{
             this.props.history.push('/registered');
@@ -100,7 +102,7 @@ class Formulir extends Component{
 
     getData = () => {
       if(this.props.match.params.id !== undefined){
-        const url = "http://localhost:3004/form/" + this.props.match.params.id;
+        const url = Api + this.props.match.params.id;
         axios.get(url).then((res)=>{
           this.setState({...res.data});
         },
@@ -125,10 +127,7 @@ class Formulir extends Component{
         return(
           <form >
             <div className="formulir" >
-              <div className="header">
-                <h3 className="title">Formulir Pemesanan Tiket kereta api</h3>
-                <h4 className="t_desk italic" >ticket reservation form</h4>
-              </div>
+              <Header />
               {
                   this.props.match.params.id === undefined ?
                   // add

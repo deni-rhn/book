@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import Api from '../../../../env/env';
 
 class FormPenumpang3Comp extends Component {
 
@@ -29,7 +30,7 @@ class FormPenumpang3Comp extends Component {
 
     getData = () => {
       if(this.props.id !== undefined){
-        const url = "http://localhost:3004/form/" + this.props.id;
+        const url = Api+ this.props.id;
         axios.get(url).then((res)=>{
           if(res.data.penumpang3 !== ""){
             this.setState({...res.data.penumpang3});

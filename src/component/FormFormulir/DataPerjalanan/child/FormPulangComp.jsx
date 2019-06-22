@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import Api from '../../../../env/env';
 
 class FormPulangComp extends Component {
 
@@ -10,7 +11,7 @@ class FormPulangComp extends Component {
 
     getData = () => {
         if(this.props.id !== undefined){
-          const url = "http://localhost:3004/form/" + this.props.id;
+          const url = Api+ this.props.id;
           axios.get(url).then((res)=>{
             if(res.data.pulang !== ""){
                 this.setState({...res.data.pulang});
@@ -66,7 +67,7 @@ class FormPulangComp extends Component {
                         <input type="text" className="form-control rounded-0 m-0" id="basic-url" aria-describedby="basic-addon3" name="tujuan" onChange={this.isChange}  value={this.state.tujuan} />
                     </div>
                     <div className="input-group mb-2 row m-0">
-                        <input type="text" className="form-control rounded-0 col-12 m-0" id="basic-url" aria-describedby="basic-addon3" name="tanggal" onChange={this.isChange} value={this.state.tanggal} />
+                        <input type="datetime-local" className="form-control rounded-0 col-12 m-0" id="basic-url" aria-describedby="basic-addon3" name="tanggal" onChange={this.isChange} value={this.state.tanggal} />
                     </div>
                 </div>
             </div>

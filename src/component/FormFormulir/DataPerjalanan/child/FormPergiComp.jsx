@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import Api from '../../../../env/env';
 
 
 class FormPergiComp extends Component {
@@ -23,7 +24,7 @@ class FormPergiComp extends Component {
 
         getData = () => {
           if(this.props.id !== undefined){
-            const url = "http://localhost:3004/form/" + this.props.id;
+            const url = Api+ this.props.id;
             axios.get(url).then((res)=>{
               this.setState({...res.data.pergi});
             },
@@ -85,7 +86,7 @@ class FormPergiComp extends Component {
                           <div className="input-group-prepend col-3 p-0">
                             <span className="input-group-text rounded-0 panel-lblue text-white border-0 w-100" id="basic-addon3 "><b className="uppercase pr-1" >jadwal berangkat</b><span className="font-italic" ></span></span>
                           </div>
-                          <input type="date" className="form-control rounded-0 col-12 m-0" id="basic-url" aria-describedby="basic-addon3" name="tanggal" onChange={this.isChange} value={this.state.tanggal} />
+                          <input type="datetime-local" className="form-control rounded-0 col-12 m-0" id="basic-url" aria-describedby="basic-addon3" name="tanggal" onChange={this.isChange} value={this.state.tanggal} />
                         </div>
                       </div>
                     </div>

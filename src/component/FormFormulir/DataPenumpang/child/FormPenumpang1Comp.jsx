@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import Api from '../../../../env/env';
 
 class FormPenumpang1Comp extends Component {
 
@@ -29,7 +30,7 @@ class FormPenumpang1Comp extends Component {
 
     getData = () => {
       if(this.props.id !== undefined){
-        const url = "http://localhost:3004/form/" + this.props.id;
+        const url = Api+this.props.id;
         axios.get(url).then((res)=>{
           if(res.data.penumpang1 !== ""){
             this.setState({...res.data.penumpang1});
@@ -72,7 +73,7 @@ class FormPenumpang1Comp extends Component {
                     <div className="input-group-prepend col-3 p-0">
                       <span className="input-group-text rounded-0 panel-lblue text-white border-0 w-100" id="basic-addon3 "><b className="uppercase pr-1" >tipe pnp</b><span className="font-italic" > / type</span></span>
                     </div>
-                    <select className="form-control rounded-0" name="type"  onChange={this.isOption}>
+                    <select className="form-control rounded-0" name="type"  onChange={this.isOption} value={this.state.type}>
                       {opt}
                     </select>
                   </div>

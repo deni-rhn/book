@@ -1,8 +1,8 @@
 import React,{Fragment} from 'react';
-import FormPenumpang1Comp from '../DataPenumpang/FormPenumpang1Comp';
-import FormPenumpang2Comp from '../DataPenumpang/FormPenumpang2Comp';
-import FormPenumpang3Comp from '../DataPenumpang/FormPenumpang3Comp';
-import FormPenumpang4Comp from '../DataPenumpang/FormPenumpang4Comp';
+import FormPenumpang1Comp from './child/FormPenumpang1Comp';
+import FormPenumpang2Comp from './child/FormPenumpang2Comp';
+import FormPenumpang3Comp from './child/FormPenumpang3Comp';
+import FormPenumpang4Comp from './child/FormPenumpang4Comp';
 
 const Info = () => {
   return (
@@ -37,14 +37,14 @@ class DataPenumpangComp extends React.Component {
                 <p><b className="uppercase" >data penumpang</b> / <span className="font-italic" >passenger details</span></p>
               </div>
               <div className="row">
-                <div className="col-8">
+                <div className="col-7">
                   {
                     this.props.status === "edit" ?
                     <Fragment><FormPenumpang1Comp id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /><FormPenumpang2Comp id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /></Fragment> :
                     <Fragment><FormPenumpang1Comp isHandle={(e)=>this.handlePenumpang(e)} /><FormPenumpang2Comp isHandle={(e)=>this.handlePenumpang(e)} /></Fragment>
                   }
                 </div>
-                <div className="col-4 pl-0">
+                <div className="col-5 pl-0">
                   {
                     this.props.status === "edit" ?
                     <Fragment><FormPenumpang3Comp id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /><FormPenumpang4Comp id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /></Fragment> :
