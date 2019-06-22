@@ -17,9 +17,6 @@ class Formulir extends Component{
 
     }
 
-
-    //data penumpang
-
     handleChange = (e) => {
       const name  = e.target.name;
       const value = e.target.value;
@@ -44,9 +41,7 @@ class Formulir extends Component{
     }
 
 
-    // dataperjalanan
     PerjalananChange = (value) => {
-      // this.setState({pergi:value});
       if(value.action === "pergi"){
         this.setState({pergi:value});
       }else if(value.action === "pulang"){
@@ -54,7 +49,6 @@ class Formulir extends Component{
       }
     }
 
-    // save to db json
     postData = () => {
       axios.post(Api,this.state)
       .then((res)=>{
@@ -64,7 +58,6 @@ class Formulir extends Component{
       });
     }
 
-    // save to db json
     editData = () => {
           const url = Api+this.props.match.params.id;
           axios.put(url,this.state)
@@ -75,10 +68,8 @@ class Formulir extends Component{
           });
         }
 
-    // form submit
     submitForm = (e) => {
       e.preventDefault();
-      // this.postData();
       if(this.state.nama !== "" && this.state.alamat !== "" && this.state.telephone !== "") {
         if(this.state.penumpang1 !== "" && this.state.pergi !== "" ){
           if(this.state.penumpang1.nama_p !== "" && this.state.penumpang1.id !== "" && this.state.penumpang1.type !== ""  && this.state.pergi.nama_kereta !== "" && this.state.pergi.kelas !== "" && this.state.pergi.asal !== "" && this.state.pergi.tanggal !== "" && this.state.pergi.tujuan !== "" ){
@@ -130,22 +121,16 @@ class Formulir extends Component{
               <Header />
               {
                   this.props.match.params.id === undefined ?
-                  // add
                   <Fragment><DataPemesanaComp  status="add"  handle={this.handleChange} /><DataPenumpangComp  handleChange={ (val)=> this.penumpangChange(val) }/><DataPerjalananComp handlePejalanan={(val)=> this.PerjalananChange(val) } /> </Fragment> :
-                  // edit
                   <Fragment><DataPemesanaComp  status={this.act1}  handle={this.handleChange} data={this.state} /><DataPenumpangComp status={this.act1} handleChange={ (val)=> this.penumpangChange(val) } params={this.props.match.params.id} /><DataPerjalananComp params={this.props.match.params.id} status={this.act1} handlePejalanan={(val)=> this.PerjalananChange(val) } /> </Fragment>
               }
               <hr/>
-              {/* <div className="alert alert-primary mt-2" role="alert">
-                Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-              </div> */}
               <hr/>
               <div className="pesan text-center mb-4 mt-4">
                 {
                   this.props.match.params.id === undefined ?
-                  // save
-                  <button type="button submit" onClick={this.submitForm} className="btn btn-primary">Pesan Tiket</button>:
-                  <Fragment><button type="button submit" onClick={this.editForm} className="btn btn-primary">Edit Tiket</button> <button type="button submit" onClick={this.cancle} className="btn btn-danger">Batal Edit</button></Fragment>
+                  <button type="button submit" onClick={this.submitForm} className="btn btn-primary btn-lg w-40">Pesan Tiket</button>:
+                  <Fragment><button type="button submit" onClick={this.editForm} className="btn btn-primary btn-lg w-40">Edit Tiket</button> <button type="button submit" onClick={this.cancle} className="btn btn-danger">Batal Edit</button></Fragment>
                 }
               </div>
             </div>

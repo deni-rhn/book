@@ -39,7 +39,7 @@ class DataPerjalananComp extends Component {
             <p><b className="uppercase" >data perjalanan</b> / <span className="font-italic" >booking details</span></p>
           </div>
           <div className="row">
-            <div className="col-7">
+            <div className="col-8">
               {
                 this.props.status === "edit" ?
                 // edit
@@ -48,7 +48,7 @@ class DataPerjalananComp extends Component {
                 <Fragment><FormPergiComp  data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment>
               }
             </div>
-            <div className="col-5 pl-0">
+            <div className="col-4 pl-0">
             {
                 this.props.status === "edit" ?
                 // edit

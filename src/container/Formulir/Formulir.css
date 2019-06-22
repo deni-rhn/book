@@ -46,3 +46,7 @@ select {
     height: 2.9em !important;
     padding: 0em !important;
 }
+
+.w-40{
+    width: 40%;
+}
