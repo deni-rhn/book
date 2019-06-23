@@ -3,6 +3,7 @@ import BookedList from '../../../component/list/BookedList';
 import axios from 'axios';
 import Api from '../../../env/env';
 import '../../../index';
+import {Link} from 'react-router-dom';
 
 class Registered extends Component {
 
@@ -41,6 +42,7 @@ class Registered extends Component {
         return(
             <Fragment>
                 <h2 className="text-center">List Booking</h2>
+                    <Link to="/" className="btn btn-primary mr-3">Isi Form</Link>
                 <div class="container">
                 <table class="table">
                     <thead>
