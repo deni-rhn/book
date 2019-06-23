@@ -1,8 +1,8 @@
 import React,{Fragment} from 'react';
-import FormPenumpang1Comp from './child/FormPenumpang1Comp';
-import FormPenumpang2Comp from './child/FormPenumpang2Comp';
-import FormPenumpang3Comp from './child/FormPenumpang3Comp';
-import FormPenumpang4Comp from './child/FormPenumpang4Comp';
+import Penumpang1 from './child/Penumpang1';
+import Penumpang2 from './child/Penumpang2';
+import Penumpang3 from './child/Penumpang3';
+import Penumpang4 from './child/Penumpang4';
 
 const Info = () => {
   return (
@@ -21,7 +21,7 @@ const Info = () => {
   )
 }
 
-class DataPenumpangComp extends React.Component {
+class Penumpang extends React.Component {
 
   handlePenumpang = (e) => {
     this.props.handleChange(e);
@@ -38,15 +38,15 @@ class DataPenumpangComp extends React.Component {
                 <div className="col-8">
                   {
                     this.props.status === "edit" ?
-                    <Fragment><FormPenumpang1Comp id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /><FormPenumpang2Comp id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /></Fragment> :
-                    <Fragment><FormPenumpang1Comp isHandle={(e)=>this.handlePenumpang(e)} /><FormPenumpang2Comp isHandle={(e)=>this.handlePenumpang(e)} /></Fragment>
+                    <Fragment><Penumpang1 id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /><Penumpang2 id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /></Fragment> :
+                    <Fragment><Penumpang1 isHandle={(e)=>this.handlePenumpang(e)} /><Penumpang2 isHandle={(e)=>this.handlePenumpang(e)} /></Fragment>
                   }
                 </div>
                 <div className="col-4 pl-0">
                   {
                     this.props.status === "edit" ?
-                    <Fragment><FormPenumpang3Comp id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /><FormPenumpang4Comp id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /></Fragment> :
-                    <Fragment><FormPenumpang3Comp isHandle={(e)=>this.handlePenumpang(e)} /><FormPenumpang4Comp isHandle={(e)=>this.handlePenumpang(e)} /></Fragment>
+                    <Fragment><Penumpang3 id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /><Penumpang4 id={this.props.params} isHandle={(e)=>this.handlePenumpang(e)} /></Fragment> :
+                    <Fragment><Penumpang3 isHandle={(e)=>this.handlePenumpang(e)} /><Penumpang4 isHandle={(e)=>this.handlePenumpang(e)} /></Fragment>
                   }
                 </div>
               </div>
@@ -57,4 +57,4 @@ class DataPenumpangComp extends React.Component {
   }
 }
 
-export default DataPenumpangComp;
+export default Penumpang;

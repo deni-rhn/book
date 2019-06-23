@@ -3,7 +3,7 @@ import axios from 'axios';
 import Api from '../../../../env/env';
 
 
-class FormPergiComp extends Component {
+class Pergi extends Component {
 
         constructor(props){
             super(props);
@@ -11,16 +11,12 @@ class FormPergiComp extends Component {
         }
 
         isChange = (e) => {
-            const nama  = e.target.name;
-            const value = e.target.value;
-            this.setState({[nama]:value},()=>{
-              this.props.data(this.state);
-            });
-        }
-
-        isOption = (e) => {
-            this.state.kelas = e.target.value;
-        }
+          const nama  = e.target.name;
+          const value = e.target.value;
+          this.setState({[nama]:value},()=>{
+            this.props.data(this.state);
+          });
+        };
 
         getData = () => {
           if(this.props.id !== undefined){
@@ -94,4 +90,4 @@ class FormPergiComp extends Component {
         }
 }
 
-export default FormPergiComp;
+export default Pergi;

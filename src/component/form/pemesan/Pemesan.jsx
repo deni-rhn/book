@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DataPemesananComp = (props) => {
+const Pemesan = (props) => {
     if(props.status === "edit"){
       return(
               <div className="_forms">
@@ -60,4 +60,4 @@ const DataPemesananComp = (props) => {
   }
 }
 
-export default DataPemesananComp;
+export default Pemesan;
