@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import axios from 'axios';
 import Api from '../../../../env/env';
 
-class FormPulangComp extends Component {
+class Pulang extends Component {
 
     constructor(props){
         super(props);
@@ -75,4 +75,4 @@ class FormPulangComp extends Component {
     }
 }
 
-export default FormPulangComp;
+export default Pulang;

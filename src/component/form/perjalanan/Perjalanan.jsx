@@ -1,6 +1,6 @@
 import React,{Component,Fragment} from 'react';
-import FormPergiComp from './child/FormPergiComp';
-import FormPulangComp from './child/FormPulangComp';
+import Pergi from './child/Pergi';
+import Pulang from './child/Pulang';
 
 
 const Info = () => {
@@ -21,7 +21,7 @@ const Info = () => {
 }
 
 
-class DataPerjalananComp extends Component {
+class Perjalanan extends Component {
 
     constructor(props){
       super(props)
@@ -43,18 +43,18 @@ class DataPerjalananComp extends Component {
               {
                 this.props.status === "edit" ?
                 // edit
-                <Fragment><FormPergiComp id={this.props.params} data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment> :
+                <Fragment><Pergi id={this.props.params} data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment> :
                 // add
-                <Fragment><FormPergiComp  data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment>
+                <Fragment><Pergi  data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment>
               }
             </div>
             <div className="col-4 pl-0">
             {
                 this.props.status === "edit" ?
                 // edit
-                <Fragment><FormPulangComp id={this.props.params} data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment> :
+                <Fragment><Pulang id={this.props.params} data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment> :
                 // add
-                <Fragment><FormPulangComp data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment>
+                <Fragment><Pulang data={(val) => this.isPerjalanan(val) } option={(e) => this.isOption(e) } /></Fragment>
               }
             </div>
           </div>
@@ -65,4 +65,4 @@ class DataPerjalananComp extends Component {
     }
 }
 
-export default DataPerjalananComp;
+export default Perjalanan;

@@ -88,3 +88,56 @@ select {
   height: 2.9em !important;
   padding: 0em !important;
 }
+
+.formulir .header {
+  width: 100%;
+  background-color: #2b70cd;
+  text-align: center;
+  padding:20px 0;
+  margin-bottom: 20px;
+}
+
+.header .title {
+  margin: 0px;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.header .t_desk {
+  margin: 0px;
+  color: white;
+}
+
+.panel-blue {
+  background-color: #2b70cd;
+  padding: 11px;
+  color: white;
+}
+
+.panel-lblue {
+  background-color: #2196f3 !important;
+  padding: 11px;
+}
+
+.panel-blue p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.form-control {
+  padding: 1.4em;
+}
+
+select {
+  height: 2.9em !important;
+  padding: 0em !important;
+}
+
+.w-40{
+  width: 40%;
+}

@@ -1,9 +1,8 @@
 import React,{Component,Fragment} from 'react';
-import './Formulir.css';
 import axios from 'axios';
-import DataPemesanaComp from '../../component/FormFormulir/DataPemesanan/DataPemesanaComp';
-import DataPenumpangComp from '../../component/FormFormulir/DataPenumpang/DataPenumpangComp';
-import DataPerjalananComp from '../../component/FormFormulir/DataPerjalanan/DataPerjalananComp';
+import Pemesan from '../../component/form/pemesan/Pemesan';
+import Penumpang from '../../component/form/penumpang/Penumpang';
+import Perjalanan from '../../component/form/perjalanan/Perjalanan';
 import Header from '../../component/header/Header';
 import Api from '../../env/env';
 
@@ -121,8 +120,8 @@ class Formulir extends Component{
               <Header />
               {
                   this.props.match.params.id === undefined ?
-                  <Fragment><DataPemesanaComp  status="add"  handle={this.handleChange} /><DataPenumpangComp  handleChange={ (val)=> this.penumpangChange(val) }/><DataPerjalananComp handlePejalanan={(val)=> this.PerjalananChange(val) } /> </Fragment> :
-                  <Fragment><DataPemesanaComp  status={this.act1}  handle={this.handleChange} data={this.state} /><DataPenumpangComp status={this.act1} handleChange={ (val)=> this.penumpangChange(val) } params={this.props.match.params.id} /><DataPerjalananComp params={this.props.match.params.id} status={this.act1} handlePejalanan={(val)=> this.PerjalananChange(val) } /> </Fragment>
+                  <Fragment><Pemesan  status="add"  handle={this.handleChange} /><Penumpang  handleChange={ (val)=> this.penumpangChange(val) }/><Perjalanan handlePejalanan={(val)=> this.PerjalananChange(val) } /> </Fragment> :
+                  <Fragment><Pemesan  status={this.act1}  handle={this.handleChange} data={this.state} /><Penumpang status={this.act1} handleChange={ (val)=> this.penumpangChange(val) } params={this.props.match.params.id} /><Perjalanan params={this.props.match.params.id} status={this.act1} handlePejalanan={(val)=> this.PerjalananChange(val) } /> </Fragment>
               }
               <hr/>
               <hr/>

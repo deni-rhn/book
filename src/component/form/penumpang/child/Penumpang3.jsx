@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import axios from 'axios';
 import Api from '../../../../env/env';
 
-class FormPenumpang3Comp extends Component {
+class Penumpang3 extends Component {
 
     constructor(props){
         super(props);
@@ -74,4 +74,4 @@ class FormPenumpang3Comp extends Component {
       }
 }
 
-export default FormPenumpang3Comp;
+export default Penumpang3;

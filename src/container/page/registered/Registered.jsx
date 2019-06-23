@@ -1,5 +1,5 @@
 import React,{Component,Fragment} from 'react';
-import RegisteredPost from '../../../component/RegisterdComp/RegisteredPost';
+import BookedList from '../../../component/list/BookedList';
 import axios from 'axios';
 import Api from '../../../env/env';
 import '../../../index';
@@ -47,7 +47,7 @@ class Registered extends Component {
                 </div>
                 {
                     this.state.post.map((item) => {
-                        return <RegisteredPost key={item.id} id={item.id} title={item.nama} alamat={item.alamat}  delete={this.deleteData} />
+                        return <BookedList key={item.id} id={item.id} title={item.nama} alamat={item.alamat}  delete={this.deleteData} />
                     })
                 }
             </div>
