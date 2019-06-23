@@ -3,6 +3,7 @@ import BookedList from '../../../component/list/BookedList';
 import axios from 'axios';
 import Api from '../../../env/env';
 import '../../../index';
+import {Link} from 'react-router-dom';
 
 class Registered extends Component {
 
@@ -39,18 +40,26 @@ class Registered extends Component {
 
     render(){
         return(
-            <div className="registered" >
-                <div className="title">
-                    <h1 className="text-center" > List Booking </h1>
-                    <hr/>
-                    <br/>
+            <Fragment>
+                <h2 className="text-center">List Booking</h2>
+                    <Link to="/" className="btn btn-primary mr-3">Isi Form</Link>
+                <div class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Pemesan</th>
+                            <th>Alamat</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    {
+                        this.state.post.map((item) => {
+                            return <BookedList key={item.id} id={item.id} title={item.nama} alamat={item.alamat}  delete={this.deleteData} />
+                        })
+                    }
+                </table>
                 </div>
-                {
-                    this.state.post.map((item) => {
-                        return <BookedList key={item.id} id={item.id} title={item.nama} alamat={item.alamat}  delete={this.deleteData} />
-                    })
-                }
-            </div>
+            </Fragment>
         )
     }
 }
